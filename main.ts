@@ -4,15 +4,13 @@ import { Mage } from "./Mage";
 import { Warrior } from "./Warrior";
 import { Priest } from "./Priest";
 
-let mage: Mage = new Mage("Mago");
-let warrior: Warrior = new Warrior("Warrior");
-let priest: Priest = new Priest("Priest");
+let mage: Personagem = new Mage("Mago");
+let warrior: Personagem = new Warrior("Warrior");
+let priest: Personagem = new Priest("Priest");
 
 console.log(mage);
 console.log(warrior);
 console.log(priest);
-
-// let person: Personagem = new Personagem("Sansa Stark", 100, 40, 20, 20);
 
 // let input = prompt();
 
