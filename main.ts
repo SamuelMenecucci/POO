@@ -7,7 +7,7 @@ let opcao: number = 0;
 
 let person: Personagem = new Personagem("Sansa Stark", 100, 40, 20, 20);
 
-while (opcao !== 9 || person.isDead()) {
+while (opcao !== 9 && !person.isDead()) {
   console.log("=========== Personagem ============");
   console.log("1- Treinar ataque");
   console.log("2- Treinar defesa");
@@ -62,4 +62,4 @@ while (opcao !== 9 || person.isDead()) {
   }
 }
 
-console.log("Morreu");
+console.log("\nMorreu\n");

@@ -8,7 +8,7 @@ const prompt_sync_1 = __importDefault(require("prompt-sync"));
 let input = (0, prompt_sync_1.default)();
 let opcao = 0;
 let person = new Personagem_1.Personagem("Sansa Stark", 100, 40, 20, 20);
-while (opcao !== 9 || person.isDead()) {
+while (opcao !== 9 && !person.isDead()) {
     console.log("=========== Personagem ============");
     console.log("1- Treinar ataque");
     console.log("2- Treinar defesa");
@@ -44,8 +44,7 @@ while (opcao !== 9 || person.isDead()) {
             console.log("Até mais!");
             break;
         default:
-            console.log("\nOpção Incorreta\n");
             break;
     }
 }
-console.log("Morreu");
+console.log("\nMorreu\n");
