@@ -1,65 +1,76 @@
 import { Personagem } from "./Personagem";
 import prompt from "prompt-sync";
+import { Mage } from "./Mage";
+import { Warrior } from "./Warrior";
+import { Priest } from "./Priest";
 
-let input = prompt();
+let mage: Mage = new Mage("Mago");
+let warrior: Warrior = new Warrior("Warrior");
+let priest: Priest = new Priest("Priest");
 
-let opcao: number = 0;
+console.log(mage);
+console.log(warrior);
+console.log(priest);
 
-let person: Personagem = new Personagem("Sansa Stark", 100, 40, 20, 20);
+// let person: Personagem = new Personagem("Sansa Stark", 100, 40, 20, 20);
 
-while (opcao !== 9 && !person.isDead()) {
-  console.log("=========== Personagem ============");
-  console.log("1- Treinar ataque");
-  console.log("2- Treinar defesa");
-  console.log("3- Descansar");
-  console.log("4- Entrar em Batalha");
-  console.log("8- Imprimir atributos");
-  console.log("9- Sair");
-  console.log("===================================");
+// let input = prompt();
 
-  opcao = +input("Escolha uma opção: ");
+// let opcao: number = 0;
 
-  switch (opcao) {
-    case 1:
-      person.treinarAtaque();
-      console.log(person.status());
+// while (opcao !== 9 && !person.isDead()) {
+//   console.log("=========== Personagem ============");
+//   console.log("1- Treinar ataque");
+//   console.log("2- Treinar defesa");
+//   console.log("3- Descansar");
+//   console.log("4- Entrar em Batalha");
+//   console.log("8- Imprimir atributos");
+//   console.log("9- Sair");
+//   console.log("===================================");
 
-      break;
+//   opcao = +input("Escolha uma opção: ");
 
-    case 2:
-      person.treinarDefesa();
+//   switch (opcao) {
+//     case 1:
+//       person.treinarAtaque();
+//       console.log(person.status());
 
-      console.log(person.status());
+//       break;
 
-      break;
+//     case 2:
+//       person.treinarDefesa();
 
-    case 3:
-      console.log(person.status());
-      let horas: number = +input("Digite o número de horas de descanso: ");
-      person.descansar(horas);
+//       console.log(person.status());
 
-      break;
+//       break;
 
-    case 4:
-      let rest: number = person.batalhar();
-      console.log(`Essa batalha custou ${rest} de energia`);
+//     case 3:
+//       console.log(person.status());
+//       let horas: number = +input("Digite o número de horas de descanso: ");
+//       person.descansar(horas);
 
-      console.log(person.status());
+//       break;
 
-      break;
+//     case 4:
+//       let rest: number = person.batalhar();
+//       console.log(`Essa batalha custou ${rest} de energia`);
 
-    case 8:
-      console.log(person.status());
+//       console.log(person.status());
 
-      break;
+//       break;
 
-    case 9:
-      console.log("Até mais!");
-      break;
+//     case 8:
+//       console.log(person.status());
 
-    default:
-      break;
-  }
-}
+//       break;
 
-console.log("\nMorreu\n");
+//     case 9:
+//       console.log("Até mais!");
+//       break;
+
+//     default:
+//       break;
+//   }
+// }
+
+// console.log("\nMorreu\n");
